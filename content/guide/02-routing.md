@@ -41,13 +41,11 @@ Por ejemplo, asi es como podria crear una página para que renderice un post de 
 </script>
 ```
 
-> Cuando renderiza paginas en el servidor, la función `preload` recive el objeto `request` completo, 
-> When rendering pages on the server, the `preload` function receives the entire `request` object, which happens to include `params` and `query` properties. This allows you to use [session middleware](https://github.com/expressjs/session) (for example). On the client, only `params` and `query` are provided. See the section on [preloading](#preloading) for more info.
-
+> Cuando renderiza paginas en el servidor, la función `preload` recive el objeto `request` completo, que suele incluir las propiedades `params` y `query`. Esto le permite usar [middleware de sesión](https://github.com/expressjs/session) (por ejemplo). En el cliente, solo las propiedades `params` y `query` son provistas. Consulte la sección  [preloading](#preloading) para más información.
 
 ### Server routes
 
-Server routes are modules written in `.js` files that export functions corresponding to HTTP methods. Each function receives Express `request` and `response` objects as arguments, plus a `next` function. This is useful for creating a JSON API. For example, here's how you could create an endpoint that served the blog page above:
+Las rutas de servidor son modulos escritos en archivos `.js` que exportan funciones correspondientes a los metodos HTTP. Cada función recive los objetos Express  `request` y `response` como argumentos, mas una función `next`. Esto es útil para crear una API JSON. Por ejemplo, asi es como podria crear un endpoint la pagina del blog de arriba:
 
 ```js
 // routes/blog/[slug].json.js
