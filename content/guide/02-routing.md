@@ -2,14 +2,14 @@
 title: Routing
 ---
 
-As we've seen, there are two types of route in Sapper — pages, and server routes.
+Como hemos visto, existen dos tipos de rutas en Sapper - paginas y rutas del servidor.
 
 
-### Pages
+### Paginas
 
-Pages are Svelte components written in `.html` files. When a user first visits the application, they will be served a server-rendered version of the route in question, plus some JavaScript that 'hydrates' the page and initialises a client-side router. From that point forward, navigating to other pages is handled entirely on the client for a fast, app-like feel.
+Las paginas son componentes de Svelte escritos en archivos `.html`. Cuando un usuario visita por primera vez la aplicación, se le servira una versión de la ruta en cuestion renderizada en el lado del servidor, ademas de un poco de código JavaScript que 'hidrata' la página e inicializa un enrutador en el lado del cliente. Desde ese punto en adelante, la navegación hacia otras paginas se maneja enteramente en el cliente para una sensación rapida similar a una aplicación.
 
-For example, here's how you could create a page that renders a blog post:
+Por ejemplo, asi es como podria crear una página para que renderice un post de un blog:
 
 ```html
 <!-- routes/blog/[slug].html -->
@@ -41,6 +41,7 @@ For example, here's how you could create a page that renders a blog post:
 </script>
 ```
 
+> Cuando renderiza paginas en el servidor, la función `preload` recive el objeto `request` completo, 
 > When rendering pages on the server, the `preload` function receives the entire `request` object, which happens to include `params` and `query` properties. This allows you to use [session middleware](https://github.com/expressjs/session) (for example). On the client, only `params` and `query` are provided. See the section on [preloading](#preloading) for more info.
 
 
