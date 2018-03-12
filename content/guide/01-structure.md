@@ -2,9 +2,9 @@
 title: Sapper app structure
 ---
 
-This section is a reference for the curious. We recommend you play around with the project template first, and come back here when you've got a feel for how things fit together.
+Esta sección es una referencia para los curiosos. Te recomendamos que juegues primero con la plantilla del proyecto, y vuelve aqui cuando tengas una idea de como encajan las cosas.
 
-If you take a look inside the [sapper-template](https://github.com/sveltejs/sapper-template) repo, you'll see some files that Sapper expects to find:
+Si echas un vistazo dentro del repositorio de la [plantilla de sapper](https://github.com/sveltejs/sapper-template), vera algunos archivos que Sapper espera encontrar:
 
 ```bash
 ├ package.json
@@ -27,22 +27,22 @@ If you take a look inside the [sapper-template](https://github.com/sveltejs/sapp
 │ └ service-worker.config.js
 ```
 
-You'll notice a few extra files and a `cypress` directory which relates to [testing](#testing) — we don't need to worry about those right now.
+Notara algunos archivos extra y un directorio `cypress` relativo al [testing](#testing) - no se preocupe de ellos por ahora.
 
-> You *can* create these files from scratch, but it's much better to use the template. See [getting started](#getting-started) for instructions on how to easily clone it
+> Puede *crear* estos archivos desde cero, pero es mucho mejor usar la plantilla. Vea [Comenzado](#getting-started) para obtener instrucciones sobre como clonarlo facilmente.
 
 
 ### package.json
 
-Your package.json contains your app's dependencies, including `sapper`, and defines a number of scripts:
+Su package.json tienen las dependencias de su proyecto, incluido `sapper`, y define un numero de scripts: 
 
-* `npm run dev` — start the app in development mode, and watch source files for changes
-* `npm run build` — build the app in production mode
-* `npm start` — start the app in production mode after you've built it
-* `npm test` — run the tests (see [testing](#testing))
+* `npm run dev` — inicia la aplicación en modo de desarrollo, y observa los archivos en busca de cambios
+* `npm run build` — compila la aplicación en modo de producción
+* `npm start` — inicia la aplicación en modo de producción luego de compilarla
+* `npm test` — ejecuta los test (vea [testing](#testing))
 
 
-### app
+### Aplicación
 
 This contains the three *entry points* for your app — `app/client.js`, `app/server.js` and (optionally) `app/service-worker.js` — along with an `app/template.html` file.
 
