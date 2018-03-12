@@ -42,13 +42,13 @@ Su package.json tienen las dependencias de su proyecto, incluido `sapper`, y def
 * `npm test` — ejecuta los test (vea [testing](#testing))
 
 
-### Aplicación
+### app
 
-This contains the three *entry points* for your app — `app/client.js`, `app/server.js` and (optionally) `app/service-worker.js` — along with an `app/template.html` file.
+Este directorio contiene los tres *entry points* para su aplicación - `app/client.js`, `app/server.js` y (opcionalmente) `app/service-worker.js` - junto con un archivo `app/template.html`.
 
 #### app/client.js
 
-This *must* import, and call, the `init` function from `sapper/runtime.js`, using the `routes` object Sapper generates:
+Esto *debe* importar y llamar a la función `init` de `sapper/runtime.js`, usando el objeto `routes` que Sapper genera:
 
 ```js
 import { init } from 'sapper/runtime.js';
@@ -59,17 +59,16 @@ init(document.querySelector('#sapper'), routes);
 if (module.hot) module.hot.accept(); // enable hot reloading
 ```
 
-In many cases, that's the entirety of your entry module, though you can do as much or as little here as you wish. See the [runtime API](#runtime-api) section for more information on functions you can import.
-
+En muchos casos, esa sera la totalidad de su modulo de entrada, aunque puede hacer aqui tanto como desee. vea la sección [runtime API](#runtime-api) para obtener más información sobre las funciones que puede importar.
 
 #### app/server.js
 
-This is a normal Express (or [Polka](https://github.com/lukeed/polka), etc) app, with two requirements:
+Esto es una aplicación Express (o [Polka](https://github.com/lukeed/polka), etc..), con dos requisitos:
 
-* it should serve the contents of the `assets` folder, using for example [serve-static](https://github.com/expressjs/serve-static)
-* it should call `app.use(sapper({ routes }))` at the end, where `routes` is imported from `app/manifest/server.js`
+* debe servir los contenidos de la carpeta `assets`, usando por ejemplo [serve-static](https://github.com/expressjs/serve-static)
+* debe llamar a `app.use(sapper({ routes }))` al final, donde `routes` es importado desde `app/manifest/server.js`
 
-Beyond that, you can write the server however you like.
+Mas alla de eso, puede escribir el servidor como desee.
 
 
 #### app/service-worker.js
