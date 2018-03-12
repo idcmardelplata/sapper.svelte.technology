@@ -67,29 +67,26 @@ export async function get(req, res, next) {
 }
 ```
 
-> `delete` is a reserved word in JavaScript. To handle DELETE requests, export a function called `del` instead.
+> `delete` es una palabra reservada en JavaScript. Para manejar peticiónes DELETE, exporte una función llamada `del` en su lugar.
 
-There are three simple rules for naming the files that define your routes:
+Hay tres simples reglas para nombrar los archivos que definen sus rutas:
 
-* A file called `routes/about.html` corresponds to the `/about` route. A file called `routes/blog/[slug].html` corresponds to the `/blog/:slug` route, in which case `params.slug` is available to the route
-* The file `routes/index.html` (or `routes/index.js`) corresponds to the root of your app. `routes/about/index.html` is treated the same as `routes/about.html`.
-* Files and directories with a leading underscore do *not* create routes. This allows you to colocate helper modules and components with the routes that depend on them — for example you could have a file called `routes/_helpers/datetime.js` and it would *not* create a `/_helpers/datetime` route
-
-
+* Un archivo llamado `routes/about.html` corresponde con la ruta `/about`. Un arhivo llamado `routes/blog/[slug].html` corresponde con la ruta `/blog/:slug`, en ese caso la propiedad `params.slug` esta disponible para la ruta
+* El archivo `routes/index.html` (o `routes/index.js`) corresponde a la raíz de su aplicación, `routes/about/index.html` es tratado igual que `routes/about.html`.
+* Los archivos y directorios con un subrayado inicial *no* crean rutas. Esto le permite colocar modulos auxiliares y componentes con las rutas que dependen de ellos - por ejemplo podria tener un archivo llamado `routes/_helpers/datetime.js` y *no* se crearia una ruta a `/_helpers/datetime`.
 
 ### Subroutes
 
-Suppose you have a route called `/settings` and a series of subroutes such as `/settings/profile` and `/settings/notifications`.
+Suponga que tiene una ruta llamada  `/settings` y una serie de subrutas como  `/settings/profile` y  `/settings/notifications`.
 
-You could do this with two separate pages — `routes/settings.html` (or `routes/settings/index.html`) and `routes/settings/[submenu].html`, but it's likely that they'll share a lot of code. If there's no `routes/settings.html` file, then `routes/settings/[submenu].html` will match `/settings` as well as subroutes like `/settings/profile`, but the value of `params.submenu` will be `undefined` in the first case.
-
+Puede hacer esto con dos páginas separadas - `routes/settings.html` (o `routes/settings/index.html`) y `routes/settings/[submenu].html`, pero es probable que compartan una gran cantidad de código. Si no hay un archivo `routes/settings.html`, entonces `routes/settings/[submenu].html` coincidira con `/settings` asi como también con subrutas como `/settings/profile`, pero el valor de `params.submenu` sera `undefined` en el primer caso.
 
 
 ### Error pages
 
-In addition to regular pages, there are two 'special' pages — `routes/4xx.html` and `routes/5xx.html`. These will be shown when an error occurs while rendering a page.
+Ademas e las paginas regulares, existen dos páginas 'especiales' - `routes/4xx.html` y `routes/5xx.html`. Estas se mostraran cuando se produzca un error al renderizar una página.
 
-The `error` object is made available to the template.
+El objeto `error` estara disponible en la plantilla.
 
-* **4xx.html** is shown when an error is encountered with an HTTP status code [between 400 and 499](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors), such as 404 Not Found
-* **5xx.html** is shown for [all other errors](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_errors). In practice, this means 500 Internal Server Error.
+* **4xx.html** se muestra cuando se encuentra un error con un código de estado HTTP [entre 400 y 499](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors), como 404 Página no encontrada
+* **5xx.html** es mostrada para [todos los otros errores](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_errors). En la practica, esto significa 500 Internal Server Error.
