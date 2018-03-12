@@ -108,4 +108,4 @@ Este es el centro de su aplicación - las páginas y las rutas del servidor. Vea
 
 ### webpack
 
-Sapper uses [webpack](https://webpack.js.org/) to bundle your app. There are three config files, one for each entry point (the service worker is optional). You probably won't need to change the config, but if you want to (for example to add new loaders or plugins), you can.
+Sapper usa [webpack](https://webpack.js.org/) para agrupar su aplicación. Hay tres archivos de configuración, uno para cada entry point (el service worker es opcional). Probablemente no necesite cambiar la configuración, pero si es lo que busca (por ejemplo para agregar nuevos loaders o plugins),puede hacerlo.
