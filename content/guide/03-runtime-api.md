@@ -39,6 +39,6 @@ Programador previamente busca la página data,lo que significa a) se asegura que
 
 ### prefetchRoutes([routes])
 
-* `routes` — an optional array of strings representing routes to prefetch
+* `routes` — un array opcional de strings representando las rutas a precargar.
 
-Programmatically prefetches the code for routes that haven't yet been fetched. Typically, you might call this after `init` is complete, to speed up subsequent navigation. Omitting arguments will cause all routes to be fetched, or you can specify routes by any matching pathname such as `/about` (to match `routes/about.html`) or `/blog/*` (to match `routes/blog/[slug].html`). Unlike `prefetch`, this won't call `preload` for individual pages.
+Programado previamente busca el codigo de las rutas que ahún no han sido buscadas. Por lo general, puede llamar a esto despues de que `init` este completo, para acelerar la subsecuente navegación. La omisión de los argumentos ara que se obtengan tods las rutas, o puede especificar rutas por cualquier nombre de ruta coincidente como `/about` (que coincide con `/routes/about.html`) o `/blog/*` (que coincide con `routes/blog/[slug].html`). A diferencia de `prefetch`, esot no llamara a `preload` para páginas individuales.
