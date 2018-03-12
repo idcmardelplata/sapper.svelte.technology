@@ -73,9 +73,9 @@ Mas alla de eso, puede escribir el servidor como desee.
 
 #### app/service-worker.js
 
-Service workers act as proxy servers that give you fine-grained control over how to respond to network requests. For example, when the browser requests `/goats.jpg`, the service worker can respond with a file it previously cached, or it can pass the request on to the server, or it could even respond with something completely different, such as a picture of llamas.
+Los workers actuan como servidores proxy que le brindan un control detallado sobre como responder a las solicitudes de la red. Por ejemplo, cuando el navegador solicita `/goats.jpg`, el worker puede responder con un archivo previamente guardado en la cache, o puede pasar la solicitud al servidor, o incluso podria responder con algo completamente diferente, como una imagen de llamas.
 
-Among other things, this makes it possible to build applications that work offline.
+Entre otras cosas, esto hace posible que su aplicación trabaje de forma offline.
 
 Because every app needs a slightly different service worker (sometimes it's appropriate to always serve from the cache, sometimes that should only be a last resort in case of no connectivity), Sapper doesn't attempt to control the service worker. Instead, you write the logic in `service-worker.js`. You can import any of the following from `app/manifest/service-worker.js`:
 
