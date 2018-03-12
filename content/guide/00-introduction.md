@@ -2,30 +2,29 @@
 title: Introduction
 ---
 
-*Note: Sapper is in early development, and some things may change before we hit version 1.*
+*Nota: Sapper esta en desarrollo temprano, y algunas cosas pueden cambiar antes de llegar a la version 1.*
 
-### What is Sapper?
+### Que es Sapper?
 
-Sapper is a framework for building extremely high-performance web apps. You're looking at one right now! There are two basic concepts:
+Sapper es un framework para construir aplicaciónes web de alto rendimiento. Estas viendo uno ahora mismo! Hay dos conceptos básicos:
 
-* Each page of your app is a [Svelte](https://svelte.technology) component
-* You create pages by adding files to the `routes` directory of your project. These will be server-rendered so that a user's first visit to your app is as fast as possible, then a client-side app takes over
+* Cada pagina de su aplicación es un componente de [Svelte](https://svelte.technology) 
+* Puede crear páginas agregando archivos al directorio `routes` de su proyecto. Estos seran renderizados en el servidor para que en la primera visita de un usuario a su aplicación sea lo mas rapida posible, luego una aplicación en el lado del cliente se hara cargo.
 
-Building an app with all the modern best practices — code-splitting, offline support, server-rendered views with client-side hydration — is fiendishly complicated. Sapper does all the boring stuff for you so that you can get on with the creative part.
+Construir una aplicación con todas las mejores practicas modernas - code-splitting, soporte offline, vistas renderizadas en el servidor con hidratación en el lado del cliente - es diabolicamente complicado. Sapper hace todas las cosas aburridas para que puedas seguir con la parte creativa.
 
-You don't need to know Svelte to understand the rest of this guide, but it will help. In short, it's a UI framework that compiles your components to highly optimized vanilla JavaScript. Read the [introductory blog post](https://svelte.technology/blog/frameworks-without-the-framework) and the [guide](https://svelte.technology/guide) to learn more.
-
-
-### Why the name?
-
-In war, the soldiers who build bridges, repair roads, clear minefields and conduct demolitions — all under combat conditions — are known as *sappers*.
-
-For web developers, the stakes are generally lower than for combat engineers. But we face our own hostile environment: underpowered devices, poor network connections, and the complexity inherent in front-end engineering. Sapper, which is short for **S**velte **app** mak**er**, is your courageous and dutiful ally.
+No necesita saber Svelte para entender el resto de esta guia, pero ayudara. En resumen se trata de un framework UI que compila sus componentes para javascript altamente optimizado. Lea el [Post introductorio](https://svelte.technology/blog/frameworks-without-the-framework) y la [guia](https://svelte.technology/guide) para conocer más.
 
 
-### Comparison with Next.js
+### Porque el nombre?
 
-[Next.js](https://github.com/zeit/next.js) is a React framework from [Zeit](https://zeit.co), and is the inspiration for Sapper. There are a few notable differences, however:
+En la guerra, los soldados que construyen puentes, reparan caminos, limpian campos minados y conducen demoliciónes - todo bajo condiciónes de combate - son conocidos como *sappers* (zapadores).
+
+Para desarrolladores web, las apuestas son generalmente más bajas que para los ingenieros de combate. Pero tambien enfrentamos nuestro propio entorno hostil: dispositivos de poca potencia, conexiones de red deficientes, y la complejidad inherente a la ingenieria de front-end. Sapper, que es la abreviatura de **S**velte **app** mak**er**, es tu aliado valiente y obediente.
+
+### Comparación con Next.js
+
+[Next.js](https://github.com/zeit/next.js) es un framework para React de [Zeit](https://zeit.co), y es la inspiración para Sapper. Sin embargo hay algunas diferencias notables:
 
 * Sapper is powered by Svelte instead of React, so it's faster and your apps are smaller
 * Instead of route masking, we encode route parameters in filenames (see the [routing](#routing) section below)
