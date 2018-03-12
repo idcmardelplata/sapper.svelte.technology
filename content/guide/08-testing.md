@@ -2,6 +2,7 @@
 title: Testing
 ---
 
+Puede usar los frameworks de testing y librerias que desee. Por defecto en el [template de sapper](https://github.com/sveltejs/sapper-template)
 You can use whatever testing frameworks and libraries you'd like. The default in [sapper-template](https://github.com/sveltejs/sapper-template) is [Cypress](https://cypress.io).
 
 
