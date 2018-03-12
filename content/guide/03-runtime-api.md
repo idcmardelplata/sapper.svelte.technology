@@ -28,16 +28,13 @@ init('#sapper', routes).then(() => {
 * `href` — la página para ir a
 * `options` — puede incluir una propiedad `replaceState`, que determina si usar `history.pushState` (por defecto) o `history.replaceState`). No requerido.
 
-
-Programmatically navigates to the given `href`. If the destination is a Sapper route, Sapper will handle the navigation, otherwise the page will be reloaded with the new `href`. (In other words, the behaviour is as though the user clicked on a link with this `href`.)
-
+Navega programaticamente a la dirección del `href` dado. Si el destino es una ruta de Sapper, Sapper se encargara de la navegación, de lo contrario, la página se volvera a cargar con el nuevo `href`. (en otras palabras, el comportamiento es como si el usuario hiciera click en un enlace con este `href`.)
 
 ### prefetch(href)
 
-* `href` — the page to prefetch
+* `href` — La página a precargar
 
-Programmatically prefetches the given page, which means a) ensuring that the code for the page is loaded, and b) calling the page's `preload` method with the appropriate options. This is the same behaviour that Sapper triggers when the user taps or mouses over an `<a>` element with [rel=prefetch](#prefetching).
-
+Programador previamente busca la página data,lo que significa a) se asegura que el código de la página este cargado, b) llamando al metodo `preload` de la página con las opciónes apropiadas. Este es el mismo comportamiento que Sapper desencadena  cuando el usuario toca o mueve el mouse sobre un elemento `<a>` con [rel=prefetch](#prefetching).
 
 
 ### prefetchRoutes([routes])
