@@ -26,15 +26,14 @@ Para desarrolladores web, las apuestas son generalmente más bajas que para los 
 
 [Next.js](https://github.com/zeit/next.js) es un framework para React de [Zeit](https://zeit.co), y es la inspiración para Sapper. Sin embargo hay algunas diferencias notables:
 
-* Sapper is powered by Svelte instead of React, so it's faster and your apps are smaller
-* Instead of route masking, we encode route parameters in filenames (see the [routing](#routing) section below)
-* As well as *pages*, you can create *server routes* in your `routes` directory. This makes it very easy to, for example, add a JSON API such as the one powering this very page (try visiting [/guide.json](/guide.json))
-* Links are just `<a>` elements, rather than framework-specific `<Link>` components. That means, for example, that [this link right here](/), despite being inside a blob of markdown, works with the router as you'd expect
+* Sapper funciona con Svelte en lugar de React, por lo tanto es mas rapido y sus aplicaciónes mas pequeñas.
+* En lugar de enmascarar las rutas, codificamos los parametros de ruta en el nombre de archivo (vea la seccion [routing](#routing) )
+* Ademas de *paginas*, puede crear *rutas de servidor* en su directorio `routes`. Esto hace que sea muy facil, por ejemplo, agregar una api JSON como la que utiliza esta página ( pruebe visitando [/guide.json](/guide.json))
+* Los enlaces son solo elementos `<a>`, en lugar de los componentes especificos `<Link>` del framework. Eso significa, que [este enlace de aqui](/), a pesar de estar dentro de una burbuja de markdown, funcióna con el router como es de esperarse.
 
+### Comenzando
 
-### Getting started
-
-The easiest way to start building a Sapper app is to clone the [sapper-template](https://github.com/sveltejs/sapper-template) repo with [degit](https://github.com/Rich-Harris/degit):
+La forma más facil de comenzar a construir una aplicación Sapper es clonar el repositorio de  [sapper-template](https://github.com/sveltejs/sapper-template) con  [degit](https://github.com/Rich-Harris/degit):
 
 ```js
 npm install -g degit
@@ -44,4 +43,4 @@ npm install
 npm run dev
 ```
 
-This will scaffold a new project in the `my-app` directory, install its dependencies, and start a server on [localhost:3000](http://localhost:3000). Try editing the files to get a feel for how everything works – you may not need to bother reading the rest of this guide!
+Esto creara el scaffold de un nuevo proyecto en el directorio `my-app`, instala las dependencias, y arrancara un servidor en [localhost:3000](http://localhost:3000). Intente editar los archivos para tener una idea de como funciona todo - es posible que no necesites molestarte leyendo el resto de esta guia!.
